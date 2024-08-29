@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amogh</title>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- FAVICON -->
+  <link class="favicon" rel="icon" type="image/img" sizes="32x32" href="images/favicon-32x32.png">
+
+  <!-- Google material icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+   <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+   <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/{{YOUR KIT KEY}}.js" crossorigin="anonymous"></script>
+
+   <!-- TYPE JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+    integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <!-- jQUERY -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   <!-- SWEET ALERT -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+   <!-- EMAIL JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("{{YOUR USER KEY}}");
+    })();
+  </script>
+
+</head>
+
+<body>
+    <nav class="navbar">
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div> 
+      <div class="max-width">
+        <div class="logo">
+          <a href="#">My<span> Portfolio</span></a>
+        </div>
+        <ul class="menu">
+          <li><a href="#home" class="menu-btn">Home</a></li>
+          <li><a href="#about" class="menu-btn">About</a></li>
+          <li><a href="#skills" class="menu-btn">My Work</a></li>
+        </ul>
+        <div class="menu-btn">
+          <i class="material-icons">menu</i>
+        </div>
+      </div>
+    </nav>
+  <!-- Scroll to top button -->
+    <button id="btnScrollToTop">
+      <i class="material-icons">arrow_upward</i>
+    </button>
+    
+  <!-- home section start-->
+  <section class="home" id="home">
+    <div class="max-width">
+      <div class="home-content">
+        <div class="text-1" data-aos="fade-up">Hello, my name is</div>
+        <h1 data-value="Amogh">Amogh</h1>
+        <div class="text-3">Im a <span class="typing"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- about section -->
+  <section class="about" id="about">
+    <div class="max-width">
+      <h2 class="title" data-aos="fade-down" >About Me</h2>
+      <div class="about-content">
+        <div class="column left" data-aos="fade-right" >
+          <img src="images/vivamun_logo.png" alt="" />
+        </div>
+        <div class="column right" data-aos="fade-up">
+          <div class="text">
+            I'm Amogh and Im a <span class="typing-2"></span>
+          </div>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sunt, ex ad numquam, omnis natus ab a quia architecto provident tenetur nostrum incidunt optio ullam illo accusamus aperiam distinctio cum unde nisi fugiat non. Beatae delectus similique quod tenetur corporis tempora. Itaque doloremque rerum quas et minima iste atque laborum.
+          </p>
+          <a href="{{GOOGLE DRIVE LINK FOR RESUME}}">Download
+            Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- skills section services -->
+  <section class="skills" id="skills">
+    <div class="max-width" data-aos="fade-down">
+      <h2 class="title" data-aos="fade-up">My Work</h2>
+      <div class="skills-content">
+        <div class="column left">
+          <div class="text">
+            My creative skills & experiences.
+          </div>
+          <p class="paragraph-2">
+           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum neque velit, totam exercitationem cum harum error possimus nostrum voluptatibus recusandae? Laborum, velit aperiam! Ex ratione blanditiis assumenda distinctio nesciunt. Voluptatibus!
+          </p>
+        </div>
+        <div class="about-content">
+        <div class="column left" data-aos="fade-right" >
+          <img src="images/vivamun_logo.png" alt="" />
+        </div>
+        <div class="column right" data-aos="fade-up">
+          <div class="text">
+            I'm Amogh and Im a <span class="typing-2"></span>
+          </div>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sunt, ex ad numquam, omnis natus ab a quia architecto provident tenetur nostrum incidunt optio ullam illo accusamus aperiam distinctio cum unde nisi fugiat non. Beatae delectus similique quod tenetur corporis tempora. Itaque doloremque rerum quas et minima iste atque laborum.
+          </p>
+  </section>
+  <!-- footer section start -->
+  <footer>
+    <div class="text-center">
+      <span>
+        Created By <a href="https://www.instagram.com/awinner2468/">Amogh</a> | <span class="far fa-copyright"> </span> <script>document.write(new Date().getFullYear())</script> All rights reserved.
+        <div>
+          <a href="{{YOUR LINKEDIN}}"><i class="fab fa-linkedin"></i></a>
+          <a href="{{YOUR GITHUB}}"><i class="fab fa-github"></i></a>
+          <a href="{{YOUR YOUTUBE}}"><i class="fab fa-youtube"></i></a>
+        </div>
+      </span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+    
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({easing : 'ease-in',delay: 100,duration: 300,offset:100});window.addEventListener('load', AOS.refresh);</script>
+</body>
+
+</html>
