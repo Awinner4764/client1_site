@@ -1,156 +1,176 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<html lang="en"> 
 
-<head>
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content= 
+        "width=device-width, initial-scale=1.0"> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+        } 
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amogh</title>
+        header { 
+            background-color: #ffffff; 
+            color: #000000; 
+            text-align: center; 
+        } 
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        nav { 
+            background-color: #242424; 
+            padding: 10px; 
+        } 
 
-  <!-- FAVICON -->
-  <link class="favicon" rel="icon" type="image/img" sizes="32x32" href="images/favicon-32x32.png">
+        nav a { 
+            color: #fff; 
+            text-decoration: none; 
+            padding: 10px; 
+            margin-right: 10px; 
+            display: inline-block; 
+        } 
 
-  <!-- Google material icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        .container { 
+            display: flex; 
+            justify-content: space-between; 
+            max-width: 95%; 
+            margin: 0 auto; 
+            padding: 20px; 
+        } 
 
-   <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+        article p { 
+            text-align: justify; 
+        } 
 
-   <!-- FONT AWESOME -->
-  <script src="https://kit.fontawesome.com/{{YOUR KIT KEY}}.js" crossorigin="anonymous"></script>
+        main { 
+            flex: 2; 
+        } 
 
-   <!-- TYPE JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
-    integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        article { 
+            margin-bottom: 20px; 
+            padding: 10px 20px; 
+            border: 1px solid rgb(145, 145, 145); 
+            margin-right: 10px; 
+        } 
 
-   <!-- jQUERY -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        aside { 
+            flex: 1; 
+            background-color: #c9c9c9; 
+            padding: 10px; 
+        } 
 
-   <!-- SWEET ALERT -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        footer { 
+            background-color: #242424; 
+            color: #fff; 
+            text-align: center; 
+            position: fixed; 
+            bottom: 0; 
+            width: 100%; 
+        } 
+    </style> 
+    <title>Blogging Website Layout</title> 
+</head> 
 
-   <!-- EMAIL JS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("{{YOUR USER KEY}}");
-    })();
-  </script>
+<body> 
+    <header> 
+        <h1>GeeksforGeeks</h1> 
+        <p>A computer science portal for geeks</p> 
+    </header> 
 
-</head>
+    <nav> 
+        <a href="#">Home</a> 
+        <a href="#">HTML</a> 
+        <a href="#">CSS</a> 
+        <a href="#">JavaScript</a> 
+        <a href="#">ReactJS</a> 
+    </nav> 
 
-<body>
-    <nav class="navbar">
-      <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
-      </div> 
-      <div class="max-width">
-        <div class="logo">
-          <a href="#">My<span> Portfolio</span></a>
-        </div>
-        <ul class="menu">
-          <li><a href="#home" class="menu-btn">Home</a></li>
-          <li><a href="#about" class="menu-btn">About</a></li>
-          <li><a href="#skills" class="menu-btn">My Work</a></li>
-        </ul>
-        <div class="menu-btn">
-          <i class="material-icons">menu</i>
-        </div>
-      </div>
-    </nav>
-  <!-- Scroll to top button -->
-    <button id="btnScrollToTop">
-      <i class="material-icons">arrow_upward</i>
-    </button>
-    
-  <!-- home section start-->
-  <section class="home" id="home">
-    <div class="max-width">
-      <div class="home-content">
-        <div class="text-1" data-aos="fade-up">Hello, my name is</div>
-        <h1 data-value="Amogh">Amogh</h1>
-        <div class="text-3">Im a <span class="typing"></span></div>
-      </div>
-    </div>
-  </section>
+    <div class="container"> 
+        <main> 
+            <article> 
+                <h2>HTML</h2> 
+                <p class="post-meta"> 
+                    Published on December 11, 2023 by GeeksforGeeks 
+                </p> 
+                <p> 
+                    HTML stands for HyperText Markup Language. It is 
+                    used to design the web pages. With the help of HTML, 
+                    you can create a complete website structure. HTML 
+                    is the combination of Hypertext and Markup language. 
+                    Hypertext defines the link between the web pages 
+                    and markup language defines the text document within 
+                    the tag that define the structure of web pages. 
+                </p> 
+            </article> 
 
-  <!-- about section -->
-  <section class="about" id="about">
-    <div class="max-width">
-      <h2 class="title" data-aos="fade-down" >About Me</h2>
-      <div class="about-content">
-        <div class="column left" data-aos="fade-right" >
-          <img src="images/vivamun_logo.png" alt="" />
-        </div>
-        <div class="column right" data-aos="fade-up">
-          <div class="text">
-            I'm Amogh and Im a <span class="typing-2"></span>
-          </div>
-          <p class="paragraph">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sunt, ex ad numquam, omnis natus ab a quia architecto provident tenetur nostrum incidunt optio ullam illo accusamus aperiam distinctio cum unde nisi fugiat non. Beatae delectus similique quod tenetur corporis tempora. Itaque doloremque rerum quas et minima iste atque laborum.
-          </p>
-          <a href="{{GOOGLE DRIVE LINK FOR RESUME}}">Download
-            Resume</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- skills section services -->
-  <section class="skills" id="skills">
-    <div class="max-width" data-aos="fade-down">
-      <h2 class="title" data-aos="fade-up">My Work</h2>
-      <div class="skills-content">
-        <div class="column left">
-          <div class="text">
-            My creative skills & experiences.
-          </div>
-          <p class="paragraph-2">
-           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum neque velit, totam exercitationem cum harum error possimus nostrum voluptatibus recusandae? Laborum, velit aperiam! Ex ratione blanditiis assumenda distinctio nesciunt. Voluptatibus!
-          </p>
-        </div>
-        <div class="about-content">
-        <div class="column left" data-aos="fade-right" >
-          <img src="images/vivamun_logo.png" alt="" />
-        </div>
-        <div class="column right" data-aos="fade-up">
-          <div class="text">
-            I'm Amogh and Im a <span class="typing-2"></span>
-          </div>
-          <p class="paragraph">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sunt, ex ad numquam, omnis natus ab a quia architecto provident tenetur nostrum incidunt optio ullam illo accusamus aperiam distinctio cum unde nisi fugiat non. Beatae delectus similique quod tenetur corporis tempora. Itaque doloremque rerum quas et minima iste atque laborum.
-          </p>
-  </section>
-  <!-- footer section start -->
-  <footer>
-    <div class="text-center">
-      <span>
-        Created By <a href="https://www.instagram.com/awinner2468/">Amogh</a> | <span class="far fa-copyright"> </span> <script>document.write(new Date().getFullYear())</script> All rights reserved.
-        <div>
-          <a href="{{YOUR LINKEDIN}}"><i class="fab fa-linkedin"></i></a>
-          <a href="{{YOUR GITHUB}}"><i class="fab fa-github"></i></a>
-          <a href="{{YOUR YOUTUBE}}"><i class="fab fa-youtube"></i></a>
-        </div>
-      </span>
-    </div>
-  </footer>
-  <script src="script.js"></script>
-  <script>
-    // When the user scrolls the page, execute myFunction 
-    window.onscroll = function() {myFunction()};
-    
-    function myFunction() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    }
-    </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>AOS.init({easing : 'ease-in',delay: 100,duration: 300,offset:100});window.addEventListener('load', AOS.refresh);</script>
-</body>
+            <article> 
+                <h2>CSS</h2> 
+                <p class="post-meta"> 
+                    Published on December 10, 2023 by GeeksforGeeks 
+                </p> 
+                <p> 
+                    CSS (Cascading Style Sheets) is used to styles web 
+                    pages. Cascading Style Sheets are fondly referred 
+                    to as CSS. The reason for using this is to simplify 
+                    the process of making web pages presentable. It allows 
+                    you to apply styles on web pages. More importantly, 
+                    it enables you to do this independently of the HTML 
+                    that makes up each web page. 
+                </p> 
+            </article> 
+
+            <article> 
+                <h2>JavaScript</h2> 
+                <p class="post-meta"> 
+                    Published on December 09, 2023 by GeeksforGeeks 
+                </p> 
+                <p> 
+                    JavaScript (JS) is the most popular lightweight, 
+                    interpreted compiled programming language. It can 
+                    be used for both Client-side as well as Server-side 
+                    developments. JavaScript also known as a scripting 
+                    language for web pages. This JavaScript Tutorial is 
+                    designed to help both beginners and experienced 
+                    professionals master the fundamentals of JavaScript 
+                    and unleash their creativity to build powerful web 
+                    applications. From basic syntax and data types to 
+                    advanced topics such as object-oriented programming 
+                    and DOM manipulation. 
+                </p> 
+            </article> 
+
+            <article> 
+                <h2>ReactJS</h2> 
+                <p class="post-meta"> 
+                    Published on December 08, 2023 by GeeksforGeeks 
+                </p> 
+                <p> 
+                    ReactJS is a declarative, efficient, and flexible 
+                    JavaScript library for building user interfaces. 
+                    It is an open-source, component-based front-end 
+                    library that is responsible only for the view layer 
+                    of the application. ReactJS is not a framework, it 
+                    is just a library developed by Facebook to solve 
+                    some problems that we were facing earlier. 
+                </p> 
+            </article> 
+        </main> 
+
+        <aside> 
+            <h2>Recent Posts</h2> 
+            <ul> 
+                <li><a href="#">HTML</a></li> 
+                <li><a href="#">CSS</a></li> 
+                <li><a href="#">JavaScript</a></li> 
+                <li><a href="#">ReactJS</a></li> 
+            </ul> 
+        </aside> 
+    </div> 
+
+    <footer> 
+        <p>© 2023 Your Blog Name. All rights reserved.</p> 
+    </footer> 
+</body> 
 
 </html>
