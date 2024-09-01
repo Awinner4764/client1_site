@@ -8,19 +8,29 @@ function displayPost(post) {
     postElement.className = 'post';
 
     postElement.innerHTML = `
-        <h2>${post.title}</h2>
-        <p>${post.content}</p>
+        <h2>${sanitizeHTML(post.title)}</h2>
+        <p>${sanitizeHTML(post.content)}</p>
+        <small>Posted on ${new Date(post.createdAt.seconds * 1000).toLocaleString()}</small>
     `;
 
-    postsContainer.appendChild(postElement);
+    postsContainer.prepend(postElement);
+}
+
+// Function to sanitize input to prevent XSS attacks
+function sanitizeHTML(str) {
+    var temp = document.createElement('div');
+    temp.textContent = str;
+    return temp.innerHTML;
 }
 
 // Load all posts on page load
 window.onload = function() {
-    db.collection('posts').get().then((snapshot) => {
+    db.collection('posts').orderBy('createdAt', 'desc').get().then((snapshot) => {
         snapshot.docs.forEach(doc => {
             displayPost(doc.data());
         });
+    }).catch(error => {
+        console.error('Error fetching posts:', error);
     });
 };
 
@@ -28,18 +38,25 @@ window.onload = function() {
 document.getElementById('postForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const title = document.getElementById('title').value;
-    const content = document.getElementById('content').value;
+    const title = document.getElementById('title').value.trim();
+    const content = document.getElementById('content').value.trim();
+
+    if (title === "" || content === "") {
+        alert("Please fill in both the title and content.");
+        return;
+    }
 
     const postData = {
         title: title,
-        content: content
+        content: content,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
     };
 
     db.collection('posts').add(postData).then(() => {
         displayPost(postData);
         document.getElementById('postForm').reset();
     }).catch(error => {
-        console.error('Error adding post: ', error);
+        console.error('Error adding post:', error);
+        alert('Failed to submit post. Please try again.');
     });
 });
