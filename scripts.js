@@ -1,33 +1,7 @@
-document.getElementById('postForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+// Initialize Firebase Firestore
+const db = firebase.firestore();
 
-    const title = document.getElementById('title').value;
-    const content = document.getElementById('content').value;
-
-    const postData = {
-        title: title,
-        content: content
-    };
-
-    fetch('/submit-post', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(postData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            displayPost(postData);
-            document.getElementById('postForm').reset();
-        } else {
-            alert('Failed to submit post.');
-        }
-    })
-    .catch(error => console.error('Error:', error));
-});
-
+// Function to display a post on the page
 function displayPost(post) {
     const postsContainer = document.getElementById('posts-container');
     const postElement = document.createElement('article');
@@ -40,3 +14,32 @@ function displayPost(post) {
 
     postsContainer.appendChild(postElement);
 }
+
+// Load all posts on page load
+window.onload = function() {
+    db.collection('posts').get().then((snapshot) => {
+        snapshot.docs.forEach(doc => {
+            displayPost(doc.data());
+        });
+    });
+};
+
+// Handle form submission
+document.getElementById('postForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const title = document.getElementById('title').value;
+    const content = document.getElementById('content').value;
+
+    const postData = {
+        title: title,
+        content: content
+    };
+
+    db.collection('posts').add(postData).then(() => {
+        displayPost(postData);
+        document.getElementById('postForm').reset();
+    }).catch(error => {
+        console.error('Error adding post: ', error);
+    });
+});
