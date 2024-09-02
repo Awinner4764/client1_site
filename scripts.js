@@ -10,6 +10,7 @@ function displayPost(post) {
     postElement.innerHTML = `
         <h2>${sanitizeHTML(post.title)}</h2>
         <p>${sanitizeHTML(post.content)}</p>
+        <small>Posted on ${new Date(post.createdAt.seconds * 1000).toLocaleString()}</small>
     `;
 
     postsContainer.prepend(postElement);
