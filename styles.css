@@ -63,6 +63,7 @@ body {
 }
 
 .hero h1 {
+    background-color: #fff;
     font-size: 48px;
     margin-bottom: 10px;
 }
