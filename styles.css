@@ -54,9 +54,12 @@ body {
 
 /* Hero Section */
 .hero {
-    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     text-align: center;
-    padding: 80px 20px;
+    background: rgba(0, 0, 0, 0.5); 
 }
 
 .hero h1 {
