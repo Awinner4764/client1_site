@@ -31,6 +31,7 @@ body {
 }
 
 .nav-links {
+    font-size: 14px;
     list-style: none;
     display: flex;
 }
