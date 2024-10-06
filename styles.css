@@ -196,3 +196,24 @@ footer {
         font-size: 18px;
     }
 }
+.about-us {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: center;
+}
+
+.about-us h1, .about-us h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-us p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
