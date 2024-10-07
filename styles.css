@@ -51,29 +51,7 @@ body {
 
 .burger {
     display: none;
-    cursor: pointer;
 }
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
-    transition: 0.3s;
-}
-
-/* Toggle the burger icon to an "X" */
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
 /* Mobile nav links styling */
 .nav-links {
     list-style: none;
