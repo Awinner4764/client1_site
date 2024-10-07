@@ -194,7 +194,7 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
-        display: none;
+        display: flex;
     }
 
     .nav-links li {
