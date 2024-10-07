@@ -32,15 +32,6 @@ window.onload = function() {
         console.error('Error fetching posts:', error);
     });
 };
-<script>
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-
-    burger.addEventListener('click', () => {
-        nav.classList.toggle('nav-active');
-        burger.classList.toggle('toggle');
-    });
-</script>
 // Handle form submission
 document.getElementById('postForm').addEventListener('submit', function(e) {
     e.preventDefault();
